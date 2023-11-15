@@ -78,16 +78,27 @@
     <!-- javascript part -->
     <script type="text/javascript">
 
-        let numberA = document.getElementById("number").value;
+        // Déclaration faites trop tôt (récupére la valeur de l'imput au chargement de la page donc = null) let numberA = document.getElementById("number").value;
 
         function afficherMessage() {
+
+            // Déclaration de la récupération de la valeur input client au moment du click.
+            let numberA = document.getElementById("number").value;
             
-            if ((numberA < 10) || (numberA > 100)) {
+            // Condition si inférieur a 10 ou supérieur a 100 = alert
+            if ((numberA < 10) || (numberA > 100)) 
+            {
                 alert ("Erreur de saisie");
-                return;
             }
-                
-            displayResult('Vous avez choisi :', numberA);
+            // Il manquait une condition de fin avec un retour si condition précédente respecter
+            else
+            {
+                displayResult('Vous avez choisi :', numberA);
+            }
+
+            // Console log qui ma permis de determiner que numberA était mal placer
+            console.log(numberA);
+            
         }
 
     </script>

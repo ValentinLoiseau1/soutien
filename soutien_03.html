@@ -86,12 +86,45 @@
 
     <!-- javascript part -->
     <script type="text/javascript">
-
+        
         // code here for the function multiply
 
-        // code here for the function that is called on 'click'
     
+    /*
+    * Fonction qui fait la mutiplication entre deux nombre donné en paramétre
+    * Paramètres:
+    *  - a : le premier nombre à multipier
+    *  - b : le second nombre a multiplier
+    * Retour : nombre (resultat de la multiplication)
+    */
+    function multiply(a, b){
 
+        return a *= b;
+
+    }
+
+    /*
+    * Fonction qui recupére les valeurs de l'input client au moment du click sur le bouton.
+    * Verification des valeurs saisies.
+    * Affichage du resultat concaténé au message.
+    * Retour :
+    */
+    function calculerProduit(){
+
+        let nombreA = document.getElementById("number-A").value
+        let nombreB = document.getElementById("number-B").value
+
+
+        if(isNaN(nombreA) || isNaN(nombreB))
+        {
+            alert("Veuillez renseigné un nombre dans la cases indiqué")
+        }
+        else 
+        {
+            // alert("Le résultat de cette multiplication est : " + multiply(nombreA,nombreB))
+            displayResult("Le résultat de cette multiplication est : ", multiply(nombreA,nombreB));
+        }
+    }
     </script>
 
 </body>

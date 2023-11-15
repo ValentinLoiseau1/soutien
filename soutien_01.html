@@ -83,10 +83,13 @@
 
         function afficherMessage() {
 
+            // Récupération de la valeur client rentré dans l'imput.
             let element = document.getElementById("your-message");
             
+            // Déclaration de message = la valeur de l'imput text client
             let message = element.value;
 
+            // Appel de la fonction displayResult qui ce trouve dans tools.js 
             displayResult('Vous avez écrit :', message);
         }
 
