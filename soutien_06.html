@@ -18,10 +18,12 @@
         <ul>
             <li>faire les points dans l'ordre et ne passer au point suivant que lorsque le précédent est achevé
                 et testé,</li>
-            <li>utiliser la console autant que nécessaire Pour bien observer le contenu et le type des différentes variables,</li>
+            <li>utiliser la console autant que nécessaire Pour bien observer le contenu et le type des différentes
+                variables,</li>
             <li>écrire du code structuré et correctement indenté,</li>
             <li>écrire du code <strong>largement documenté !</strong></li>
-            <li>l'ajout du code JavaScript est fait entre les balises &lt;script&gt;...&lt;script&gt; de ce fichiet html</li>
+            <li>l'ajout du code JavaScript est fait entre les balises &lt;script&gt;...&lt;script&gt; de ce fichiet html
+            </li>
         </ul>
         <p>Eléments de départ fournis quel que soit l'exercice :</p>
         <ul>
@@ -35,15 +37,17 @@
                     <li>une fonction de génération d'une série aléatoire de nombres entiers rangés dans un tableau de
                         type Array,</li>
                 </ul>
-                L'utilisation de ces outils n'est pas systématiquement nécessaire (cela dépend des exercices). Par contre, 
+                L'utilisation de ces outils n'est pas systématiquement nécessaire (cela dépend des exercices). Par
+                contre,
                 <span class="text-danger">vous n'avez, en aucun cas, besoin</span> :
                 <ul>
                     <li><span class="text-danger">de modifier le code</span> de ces outils,</li>
-                    <li><span class="text-danger">de copier le code</span> des fonctions contenues dans <em>tools.js</em> dans 
+                    <li><span class="text-danger">de copier le code</span> des fonctions contenues dans
+                        <em>tools.js</em> dans
                         votre propre code.<br>
                         Si vous utilisez les fonctions outils, vous ne pouvez que les "appeler".</li>
                 </ul>
-                
+
             </li>
         </ul>
         <h5 class="text-success text-center">Que la force soit avec vous !</h5>
@@ -53,14 +57,16 @@
     <div class="card subject">
         <p class="h6 font-weight-bold text-center">Soutien #04 - Filtrer un tableau</p>
         <ol>
-            <li>À l'appui sur le bouton 'Générer', créez, à l'aide de la fonction outil 
+            <li>À l'appui sur le bouton 'Générer', créez, à l'aide de la fonction outil
                 <em>randomArrayOfIntFromInterval</em>, un tableau de 20 nombres entre 0 et 100.<br>
-                Cela se fait en écrivant la fonction <em>genererTableau</em> appelée lors du click sur le bouton.</li>
+                Cela se fait en écrivant la fonction <em>genererTableau</em> appelée lors du click sur le bouton.
+            </li>
             <li>À l'appui sur le bouton 'Filtrer', en compétant la fonction <em>filtrerTableau</em> :
                 <ul>
-                    <li>Lancez le parcours du tableau créé au point précédent (choisir le type de boucle le plus 
+                    <li>Lancez le parcours du tableau créé au point précédent (choisir le type de boucle le plus
                         adapté) et construisez un nouveau tableau ne contenant que les nombres supérieurs à 50,</li>
-                    <li>Faites l'affichage du tableau résultat en utilisant la fonction <em>displayArray</em> proposée dans les outils.</li>
+                    <li>Faites l'affichage du tableau résultat en utilisant la fonction <em>displayArray</em> proposée
+                        dans les outils.</li>
                 </ul>
             </li>
         </ol>
@@ -85,13 +91,35 @@
     <!-- javascript part -->
     <script type="text/javascript">
 
-    function genererTableau() {
+        let tableau = [];
 
-    }
+        function genererTableau() {
 
-    function filtrerTableau() {
+            tableau = randomArrayOfIntFromInterval(20, 0, 100);
 
-    }
+            displayArray(tableau)
+            console.log(tableau)
+            return tableau
+            
+        }
+
+        function filtrerTableau() {
+            
+        
+            let tableau2 =[];
+
+            for(let i = 0; i < tableau.length ; i++){
+
+                if (tableau[i] >= 50) 
+                {
+                tableau2.push(tableau[i])
+                }
+
+            }
+                
+            displayArray(tableau2);
+            console.log(tableau2);
+        }
 
     </script>
 
